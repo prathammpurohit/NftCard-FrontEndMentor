@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cairo&family=Cormorant+Garamond:ital@1&family=Croissant+One&family=EB+Garamond&family=Fraunces:wght@100&family=Hind&family=Inria+Serif&family=Lobster&family=Luxurious+Roman&family=Marck+Script&family=MedievalSharp&family=Merriweather&family=Noto+Serif+JP&family=Open+Sans&family=Outfit&family=Playfair+Display+SC&family=Playfair+Display:ital,wght@1,500&family=Quicksand&family=Roboto&family=Sacramento&family=Sedgwick+Ave&family=Source+Serif+Pro&family=Special+Elite&family=Tenor+Sans&family=The+Nautigal:wght@700&display=swap');
+
+html{
+    font-size: 18px;
+}
+
+:root{
+    --soft-blue: rgb(139, 172, 218);
+    --cyan: hsl(178, 100%, 50%);
+    --background: hsl(217, 54%, 11%);     /*(main BG) */
+    --card : hsl(216, 50%, 16%);          /*(card BG) */
+    --line : hsl(215, 32%, 27%);          /*(line)    */
+    --white: hsl(0, 0%, 100%);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    cursor: default;
+    font-family: Outfit;
+    font-size: 0.9rem;
+    overflow: hidden;
+}
+
+.adjust{
+    margin-bottom: 0.9rem;
+}
+
+.textAdjust{
+    text-align: left;
+}
+
+.changeColor{
+    color: var(--white);
+}
+
+.changeColor:hover{
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+#MainContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+    min-height: 100vh;
+    color: var(--soft-blue);
+}
+
+#ContainerImmovable{
+    border-radius: 1rem;
+    box-shadow:  0   0.4rem 0.4rem -0.4rem cornflowerblue,
+                -0.4rem 0   0.4rem -0.4rem cornflowerblue, 
+                 0.4rem 0   0.4rem -0.4rem cornflowerblue;
+}
+
+
+#ContainerImmovable:hover{
+    box-shadow:  0   0.4rem 0.4rem -0.4rem greenyellow,
+                -0.4rem 0   0.4rem -0.4rem greenyellow, 
+                 0.4rem 0   0.4rem -0.4rem greenyellow;
+}
+
+#Container{
+    height: 27rem;
+    width: 16rem;
+    background-color: var(--card);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+
+#EthImageBox{
+    display: inline-block;
+    border-radius: 0.6rem;
+    position: relative;
+    text-align: center;
+    padding: 0.2rem 0;
+}
+
+#EthImage{
+    height: 14.1rem;
+    border-radius: 0.6rem;
+}
+
+#EthImageBox::before{
+    content: "";
+    background: url("../images/icon-view.svg") no-repeat center;
+    background-color: var(--cyan);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    transition: 0.2s ease-in-out;
+}
+
+#EthImageBox:hover::before{
+    z-index: 1;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+
+#LogoFitBox{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(139, 172, 218,0.2);
+    padding-bottom: 1rem;
+}
+
+#logoFitSubBox{
+    display: flex;
+    justify-content: center;
+}
+
+.logo{
+    margin-right: 0.4rem;
+}
+
+#logoFitSubBoxDays{
+    margin-left: 0.4rem;
+}
+
+#logoFitSubBoxEth{
+    color: var(--cyan);
+}
+
+#ProfileBox{
+    padding: 0.2rem 0;
+    display: flex;
+    align-items: center;
+}
+
+#profile{
+    height: 2rem;
+    margin-right: 0.5rem;
+    border-radius: 100%;
+    border: 1px solid var(--white);
+}
+
+
